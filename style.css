@@ -1,7 +1,63 @@
+
+:root {
+  --background: #FBFDFF
+  --interactive: #D5EFFF
+  --border:#5EB1EF
+  --solid:#0588F0
+  --text:#113264
+  --border-radius: 0.25rem;
+  --transition: all 0.3s linear;
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Roboto", sans-serif;
+
+}
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+}
+
+p, a {
+  font-family: var(--font-text);
+}
+
+li {
+  list-style-type: none;
+}
+
+header nav  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--interactive);
+  height: 80px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul li {
+  margin: 0 1rem;
 }

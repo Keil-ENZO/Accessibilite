@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MacBook pro 16 pouces" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,27 +12,56 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Accessiblite</title>
+    <title>Acsibli</title>
   </head>
   <body>
     <!-- Menu de navigation -->
     <header>
       <nav>
-        <h1>Accessiblite</h1>
+        <img src="./assets/logo.png" alt="Logo" />
         <ul>
           <li><a href="/pages/produits.html">Produits</a></li>
           <li><a href="/pages/compte.html">Compte</a></li>
           <li><a href="/pages/support.html">Support</a></li>
         </ul>
       </nav>
+
+      <button
+        type="button"
+        aria-label="toggle curtain navigation"
+        class="nav-toggler"
+      >
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+      </button>
     </header>
 
     <!-- Contenu principal -->
-    <min
-      ><section>
+    <main>
+      <section>
         <article></article>
         <article></article>
-        <article></article></section
-    ></min>
+        <article></article>
+      </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+      <div>
+        <div class="logoFooter">
+          <img src="./assets/logo.png" alt="Logo" />
+          <p>&copy; 2024 Acsibli</p>
+        </div>
+
+        <div class="link">
+          <a href="/pages/produits.html">Produits</a>
+          <a href="/pages/compte.html">Compte</a>
+          <a href="/pages/support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

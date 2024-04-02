@@ -43,18 +43,18 @@
 
     <!-- Contenu principal -->
     <main class="mainInformation">
-      <h2>Formulaire de contact</h2>
+      <h2>Réservez votre essai</h2>
       <form action="" id="contactForm">
   <div class="contentForm">
     <div>
       <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom" placeholder="Nom" required pattern="[A-Za-z]+" />
+      <input type="text" id="nom" name="nom" placeholder="Nom" />
       <span id="nomError" class="error"></span> <!-- Message d'erreur pour le nom -->
     </div>
 
     <div>
       <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom" placeholder="Prénom" required pattern="[A-Za-z]+" />
+      <input type="text" id="prenom" name="prenom" placeholder="Prénom"/>
       <span id="prenomError" class="error"></span> <!-- Message d'erreur pour le prénom -->
     </div>
   </div>
@@ -62,13 +62,13 @@
   <div class="contentForm">
     <div>
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Email" required />
+      <input type="email" id="email" name="email" placeholder="Email" />
       <span id="emailError" class="error"></span> <!-- Message d'erreur pour l'email -->
     </div>
 
     <div>
       <label for="tel">Téléphone:</label>
-      <input type="tel" id="tel" name="tel" placeholder="Téléphone" required />
+      <input type="tel" id="tel" name="tel" placeholder="Téléphone" />
       <span id="telError" class="error"></span> <!-- Message d'erreur pour le téléphone -->
     </div>
   </div>
@@ -76,13 +76,13 @@
   <div class="contentForm">
     <div>
       <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Entrer votre message" required minlength="30"></textarea>
+      <textarea id="message" name="message" placeholder="Entrer votre message" minlength="30"></textarea>
       <span id="messageError" class="error"></span> <!-- Message d'erreur pour le message -->
     </div>
 
     <div>
       <label for="horaire">Plage Horaire:</label>
-      <select id="horaire" name="horaire" required>
+      <select id="horaire" name="horaire">
         <option value="matin">Matin</option>
         <option value="midi">Midi</option>
         <option value="soir">Soir</option>

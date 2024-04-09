@@ -49,7 +49,7 @@ p,
 a,
 label,
 input,
-button, textarea, select{
+button, textarea, select, span {
   font-family: var(--font-text);
   font-size: 1rem;
 
@@ -292,6 +292,40 @@ form div {
   transition: var(--transition);
 }
 
+/* Modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: var(--background);
+  
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-content div{
+  margin: 1rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 34px;
+  left: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+
+}
+
 @media screen and (min-width: 768px) {
   nav-toggler {
     display: none;
@@ -325,6 +359,10 @@ form div {
   }
 
   footer div .link {
+    flex-direction: row;
+  }
+
+  .contentForm {
     flex-direction: row;
   }
 }

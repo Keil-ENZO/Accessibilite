@@ -1,23 +1,28 @@
 const hamburgerButton = document.querySelector(".nav-toggler");
 const navigation = document.querySelector("nav");
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector(".close-modal");
 
-hamburgerButton.addEventListener("click", toggleNav);
+const cancelButton = document.getElementById("cancel");
+const confirmButton = document.getElementById("confirm");
+
+const form = document.getElementById("contactForm");
+const submitButton = form.querySelector('input[type="submit"]');
 
 function toggleNav() {
   hamburgerButton.classList.toggle("active");
   navigation.classList.toggle("active");
 }
 
+hamburgerButton.addEventListener("click", toggleNav);
 // Expressions régulières
 const nameRegex = /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/;
 const phoneRegex = /(\+|00)?(33|0)[1-9](\d{2}){4}/;
 const emailRegex = /\S+@\S+\.\S+/;
 
-const form = document.getElementById("contactForm");
-const submitButton = form.querySelector('input[type="submit"]');
-
 // Fonction de validation du formulaire
-function validateForm() {
+// Fonction de validation du formulaire
+function validateFormOnSubmit() {
   // Récupérer les éléments du formulaire et les valeurs
   const nomInput = document.getElementById("nom");
   const prenomInput = document.getElementById("prenom");
@@ -81,24 +86,29 @@ function validateForm() {
     document.getElementById("messageError").textContent = "";
   }
 
-  // Activation ou désactivation du bouton de soumission en fonction de la validité du formulaire
-  if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
-    submitButton.disabled = false;
+  // Vérifier si le formulaire est valide
+  if (form.checkValidity()) {
+    modal.style.display = "block";
   } else {
-    submitButton.disabled = true;
+    event.preventDefault();
   }
 }
 
 // Valider le formulaire lors de la soumission
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  validateForm(); // Appeler la fonction de validation ici
-  form.addEventListener("input", validateForm);
+
+  validateFormOnSubmit();
 
   if (form.checkValidity()) {
-    alert("Formulaire envoyé !");
-    form.reset();
-    window.location.reload();
+    modal.style.display = "block";
   }
 });
 
+cancelButton.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+confirmButton.addEventListener("click", function () {
+  form.submit();
+});

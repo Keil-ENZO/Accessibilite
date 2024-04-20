@@ -24,9 +24,9 @@
         </a>
 
         <ul>
-          <li><a href="pages/form.html">Formulaire</a></li>
-          <li><a href="#">Produits</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a href="pages/produits.html">Produits</a></li>
+          <li><a href="pages/compte.html">Formulaire</a></li>
+          <li><a href="pages/support.html">Support</a></li>
         </ul>
       </nav>
 
@@ -41,22 +41,20 @@
       </button>
     </header>
 
-    
-
     <!-- Contenu principal -->
     <main class="mainInformation">
-      <h2>Réservez votre essai</h2>
+      <h2>Formulaire de contact</h2>
       <form action="" id="contactForm">
   <div class="contentForm">
     <div>
       <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom" placeholder="Nom" />
+      <input type="text" id="nom" name="nom" placeholder="Nom" required pattern="[A-Za-z]+" />
       <span id="nomError" class="error"></span> <!-- Message d'erreur pour le nom -->
     </div>
 
     <div>
       <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom" placeholder="Prénom"/>
+      <input type="text" id="prenom" name="prenom" placeholder="Prénom" required pattern="[A-Za-z]+" />
       <span id="prenomError" class="error"></span> <!-- Message d'erreur pour le prénom -->
     </div>
   </div>
@@ -64,13 +62,13 @@
   <div class="contentForm">
     <div>
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Email" />
+      <input type="email" id="email" name="email" placeholder="Email" required />
       <span id="emailError" class="error"></span> <!-- Message d'erreur pour l'email -->
     </div>
 
     <div>
       <label for="tel">Téléphone:</label>
-      <input type="tel" id="tel" name="tel" placeholder="Téléphone" />
+      <input type="tel" id="tel" name="tel" placeholder="Téléphone" required />
       <span id="telError" class="error"></span> <!-- Message d'erreur pour le téléphone -->
     </div>
   </div>
@@ -78,13 +76,13 @@
   <div class="contentForm">
     <div>
       <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Entrer votre message" minlength="30"></textarea>
+      <textarea id="message" name="message" placeholder="Entrer votre message" required minlength="30"></textarea>
       <span id="messageError" class="error"></span> <!-- Message d'erreur pour le message -->
     </div>
 
     <div>
       <label for="horaire">Plage Horaire:</label>
-      <select id="horaire" name="horaire">
+      <select id="horaire" name="horaire" required>
         <option value="matin">Matin</option>
         <option value="midi">Midi</option>
         <option value="soir">Soir</option>
@@ -92,22 +90,10 @@
     </div>
   </div>
 
-  <input type="submit" value="Envoyer" id="submit" class="btn" />
+  <input type="submit" value="Envoyer" class="btn" />
 </form>
 
     </main>
-
-    <!-- Modal -->
-    <div class="modal" aria-modal="false" role="dialog" aria-describedby="modalTitle">
-      <div class="modal-content">
-      <img class="close-modal" aria-label="close modal" src="../assets/close_icon.svg" alt="close btn">
-        <h4>Êtes-vous sur de vouloir envoyer ?</h4>
-        <div>
-          <button class="btn" id="cancel">Annuler</button>
-          <button class="btn" id="confirm">Confirmer</button>
-      </div>
-        
-      </div>
 
     <!-- Pied de page -->
     <footer>
@@ -118,9 +104,9 @@
         </div>
 
         <div class="link">
-          <a href="pages/form.html">Formulaire</a>
-          <a href="#">Produits</a>
-          <a href="#">Support</a>
+          <a href="/pages/produits.html">Produits</a>
+          <a href="/pages/compte.html">Compte</a>
+          <a href="/pages/support.html">Support</a>
         </div>
       </div>
     </footer>

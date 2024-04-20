@@ -97,18 +97,6 @@ function validateFormOnSubmit() {
 // Valider le formulaire lors de la soumission
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-
-  validateFormOnSubmit();
-
-  if (form.checkValidity()) {
-    modal.style.display = "block";
-  }
-});
-
-cancelButton.addEventListener("click", function () {
-  modal.style.display = "none";
-});
-
-confirmButton.addEventListener("click", function () {
-  form.submit();
+  console.log("Formulaire envoyé !");
+  // Ici, vous pouvez ajouter la logique d'envoi du formulaire si nécessaire
 });
